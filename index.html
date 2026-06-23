@@ -1,0 +1,780 @@
+<!-- Happy Birthday Martunis - Portrait Gallery -->
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Surprise! Happy 28th Birthday, Martunis!</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#1d1f2a",
+                        "on-primary-fixed": "#001f25",
+                        "primary-container": "#22d3ee",
+                        "secondary-container": "#29a195",
+                        "primary-fixed": "#a2eeff",
+                        "on-primary": "#00363e",
+                        "festive-gold": "#FACC15",
+                        "on-surface-variant": "#bbc9cd",
+                        "on-background": "#e1e1f1",
+                        "outline": "#859397",
+                        "tertiary-fixed": "#ffddb5",
+                        "on-secondary-container": "#00302b",
+                        "surface-container-low": "#191b26",
+                        "secondary": "#6bd8cb",
+                        "outline-variant": "#3c494c",
+                        "on-primary-container": "#005763",
+                        "on-primary-fixed-variant": "#004e5a",
+                        "on-secondary-fixed": "#00201d",
+                        "inverse-surface": "#e1e1f1",
+                        "on-secondary-fixed-variant": "#005049",
+                        "on-tertiary-fixed-variant": "#643f00",
+                        "inverse-primary": "#006877",
+                        "primary-fixed-dim": "#2fd9f4",
+                        "surface-charcoal": "#1A1D2E",
+                        "surface-container-high": "#272935",
+                        "tertiary": "#ffd6a3",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "primary": "#8aebff",
+                        "surface-container-lowest": "#0b0e18",
+                        "surface-bright": "#373845",
+                        "inverse-on-surface": "#2e303c",
+                        "surface-tint": "#2fd9f4",
+                        "error-container": "#93000a",
+                        "on-secondary": "#003732",
+                        "on-tertiary-fixed": "#2a1800",
+                        "on-error-container": "#ffdad6",
+                        "festive-pink": "#F472B6",
+                        "on-surface": "#e1e1f1",
+                        "on-error": "#690005",
+                        "surface-dim": "#11131e",
+                        "on-tertiary": "#462b00",
+                        "surface": "#11131e",
+                        "tertiary-fixed-dim": "#ffb957",
+                        "tertiary-container": "#ffb13b",
+                        "background-void": "#0A0C14",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#323440",
+                        "secondary-fixed": "#89f5e7",
+                        "background": "#11131e",
+                        "on-tertiary-container": "#6e4600",
+                        "surface-container-highest": "#323440"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-hero-mobile": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "display-hero": ["Sora"],
+                        "body-md": ["Inter"],
+                        "label-mono": ["JetBrains Mono"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-hero-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-hero": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(26, 29, 46, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 235, 255, 0.1);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 30px rgba(34, 211, 238, 0.2);
+        }
+        .text-glow-gold {
+            text-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+        }
+        @keyframes flutter {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            animation: flutter 4s linear forwards;
+        }
+        .syntax-pink { color: #F472B6; }
+        .syntax-gold { color: #FACC15; }
+        .syntax-cyan { color: #8aebff; }
+        .syntax-dim { color: #bbc9cd; }
+
+        /* Carousel Styles */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            align-items: center;
+        }
+        .carousel-item {
+            flex: 0 0 70%;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0.4;
+            transform: scale(0.85);
+            filter: grayscale(100%);
+        }
+        .carousel-item.active {
+            opacity: 1;
+            transform: scale(1);
+            filter: grayscale(0%);
+        }
+        @media (max-width: 768px) {
+            .carousel-item {
+                flex: 0 0 85%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-void text-on-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm px-margin-mobile md:px-margin-desktop py-4">
+<div class="max-w-container-max mx-auto flex justify-between items-center">
+<div class="font-display-hero-mobile text-headline-md text-primary tracking-tighter">
+                Martunis</div>
+<div class="hidden md:flex gap-8 items-center">
+
+
+
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold active:scale-95 transition-transform hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]">
+                    Back to Box
+                </button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+<!-- Atmospheric Background Glows -->
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-festive-pink/10 rounded-full blur-[120px]"></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+<div class="inline-block mb-6 px-4 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-mono text-label-mono animate-pulse">
+<status: level_28_unlocked=""></status:>
+</div>
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface mb-8 tracking-tighter leading-tight">
+                Surprise! Happy 28th Birthday, <span class="text-primary">Martunis!</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">A digital tribute to my favorite front-end architect. Today I celebrate the man who makes every line of code—and every day of my life—more beautiful.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+
+
+</div>
+</div>
+<!-- Confetti Container -->
+<div class="absolute inset-0 pointer-events-none" id="confetti-container"><div class="confetti" style="width: 6.45134px; height: 6.45134px; background-color: rgb(250, 204, 21); left: 28.4891vw; top: -20px; border-radius: 0%; animation-duration: 4.32107s; animation-delay: 2.92629s;"></div><div class="confetti" style="width: 14.8562px; height: 14.8562px; background-color: rgb(107, 216, 203); left: 69.6811vw; top: -20px; border-radius: 0%; animation-duration: 3.69219s; animation-delay: 3.98903s;"></div><div class="confetti" style="width: 6.10473px; height: 6.10473px; background-color: rgb(107, 216, 203); left: 9.73378vw; top: -20px; border-radius: 50%; animation-duration: 3.51744s; animation-delay: 0.232912s;"></div><div class="confetti" style="width: 9.22922px; height: 9.22922px; background-color: rgb(250, 204, 21); left: 15.4047vw; top: -20px; border-radius: 0%; animation-duration: 4.85813s; animation-delay: 2.13549s;"></div><div class="confetti" style="width: 9.08133px; height: 9.08133px; background-color: rgb(34, 211, 238); left: 6.6936vw; top: -20px; border-radius: 0%; animation-duration: 4.71318s; animation-delay: 4.73806s;"></div><div class="confetti" style="width: 12.3732px; height: 12.3732px; background-color: rgb(162, 238, 255); left: 36.5862vw; top: -20px; border-radius: 0%; animation-duration: 3.13178s; animation-delay: 1.08873s;"></div><div class="confetti" style="width: 9.43925px; height: 9.43925px; background-color: rgb(162, 238, 255); left: 85.1821vw; top: -20px; border-radius: 50%; animation-duration: 4.90634s; animation-delay: 1.47881s;"></div><div class="confetti" style="width: 6.95162px; height: 6.95162px; background-color: rgb(244, 114, 182); left: 18.4795vw; top: -20px; border-radius: 50%; animation-duration: 4.53971s; animation-delay: 4.62573s;"></div><div class="confetti" style="width: 7.67414px; height: 7.67414px; background-color: rgb(107, 216, 203); left: 9.42088vw; top: -20px; border-radius: 50%; animation-duration: 4.78341s; animation-delay: 4.97252s;"></div><div class="confetti" style="width: 11.7224px; height: 11.7224px; background-color: rgb(244, 114, 182); left: 63.6302vw; top: -20px; border-radius: 50%; animation-duration: 4.66128s; animation-delay: 2.86787s;"></div><div class="confetti" style="width: 10.9693px; height: 10.9693px; background-color: rgb(162, 238, 255); left: 23.1468vw; top: -20px; border-radius: 0%; animation-duration: 2.62748s; animation-delay: 1.20203s;"></div><div class="confetti" style="width: 13.0207px; height: 13.0207px; background-color: rgb(107, 216, 203); left: 85.7624vw; top: -20px; border-radius: 0%; animation-duration: 2.42456s; animation-delay: 2.02559s;"></div><div class="confetti" style="width: 6.44634px; height: 6.44634px; background-color: rgb(107, 216, 203); left: 65.9836vw; top: -20px; border-radius: 0%; animation-duration: 4.6332s; animation-delay: 1.94444s;"></div><div class="confetti" style="width: 13.086px; height: 13.086px; background-color: rgb(250, 204, 21); left: 84.4116vw; top: -20px; border-radius: 50%; animation-duration: 4.63639s; animation-delay: 0.682122s;"></div><div class="confetti" style="width: 9.64442px; height: 9.64442px; background-color: rgb(162, 238, 255); left: 47.5305vw; top: -20px; border-radius: 50%; animation-duration: 4.36674s; animation-delay: 1.79112s;"></div><div class="confetti" style="width: 5.41586px; height: 5.41586px; background-color: rgb(107, 216, 203); left: 68.2116vw; top: -20px; border-radius: 0%; animation-duration: 3.17384s; animation-delay: 2.66633s;"></div><div class="confetti" style="width: 9.87639px; height: 9.87639px; background-color: rgb(34, 211, 238); left: 21.3544vw; top: -20px; border-radius: 0%; animation-duration: 2.09725s; animation-delay: 0.227246s;"></div><div class="confetti" style="width: 6.04566px; height: 6.04566px; background-color: rgb(244, 114, 182); left: 41.3929vw; top: -20px; border-radius: 50%; animation-duration: 3.98808s; animation-delay: 3.66643s;"></div><div class="confetti" style="width: 9.66423px; height: 9.66423px; background-color: rgb(34, 211, 238); left: 27.834vw; top: -20px; border-radius: 0%; animation-duration: 3.88474s; animation-delay: 4.70408s;"></div><div class="confetti" style="width: 8.54586px; height: 8.54586px; background-color: rgb(162, 238, 255); left: 97.5248vw; top: -20px; border-radius: 0%; animation-duration: 3.25727s; animation-delay: 2.48659s;"></div><div class="confetti" style="width: 11.6799px; height: 11.6799px; background-color: rgb(244, 114, 182); left: 52.3799vw; top: -20px; border-radius: 50%; animation-duration: 4.73479s; animation-delay: 0.610699s;"></div><div class="confetti" style="width: 8.77984px; height: 8.77984px; background-color: rgb(107, 216, 203); left: 91.3431vw; top: -20px; border-radius: 50%; animation-duration: 4.88405s; animation-delay: 3.66063s;"></div><div class="confetti" style="width: 10.0376px; height: 10.0376px; background-color: rgb(250, 204, 21); left: 97.4545vw; top: -20px; border-radius: 0%; animation-duration: 4.97362s; animation-delay: 2.35047s;"></div><div class="confetti" style="width: 14.0471px; height: 14.0471px; background-color: rgb(107, 216, 203); left: 0.310282vw; top: -20px; border-radius: 0%; animation-duration: 3.09178s; animation-delay: 4.10904s;"></div><div class="confetti" style="width: 7.09036px; height: 7.09036px; background-color: rgb(34, 211, 238); left: 33.729vw; top: -20px; border-radius: 50%; animation-duration: 4.93974s; animation-delay: 4.8623s;"></div><div class="confetti" style="width: 5.44979px; height: 5.44979px; background-color: rgb(162, 238, 255); left: 33.3756vw; top: -20px; border-radius: 50%; animation-duration: 2.5631s; animation-delay: 4.48658s;"></div><div class="confetti" style="width: 10.3725px; height: 10.3725px; background-color: rgb(34, 211, 238); left: 0.859982vw; top: -20px; border-radius: 0%; animation-duration: 2.44345s; animation-delay: 1.36709s;"></div><div class="confetti" style="width: 8.39917px; height: 8.39917px; background-color: rgb(244, 114, 182); left: 38.6865vw; top: -20px; border-radius: 0%; animation-duration: 4.68132s; animation-delay: 2.46689s;"></div><div class="confetti" style="width: 10.509px; height: 10.509px; background-color: rgb(107, 216, 203); left: 63.8599vw; top: -20px; border-radius: 0%; animation-duration: 4.24017s; animation-delay: 0.729874s;"></div><div class="confetti" style="width: 11.4728px; height: 11.4728px; background-color: rgb(34, 211, 238); left: 43.2276vw; top: -20px; border-radius: 50%; animation-duration: 3.39064s; animation-delay: 4.54139s;"></div><div class="confetti" style="width: 12.6047px; height: 12.6047px; background-color: rgb(162, 238, 255); left: 17.9828vw; top: -20px; border-radius: 50%; animation-duration: 3.00993s; animation-delay: 4.02799s;"></div><div class="confetti" style="width: 14.3122px; height: 14.3122px; background-color: rgb(162, 238, 255); left: 53.0803vw; top: -20px; border-radius: 0%; animation-duration: 2.31165s; animation-delay: 0.995863s;"></div><div class="confetti" style="width: 6.68544px; height: 6.68544px; background-color: rgb(34, 211, 238); left: 16.0316vw; top: -20px; border-radius: 0%; animation-duration: 4.26422s; animation-delay: 3.1013s;"></div><div class="confetti" style="width: 8.23873px; height: 8.23873px; background-color: rgb(244, 114, 182); left: 0.727986vw; top: -20px; border-radius: 0%; animation-duration: 3.85666s; animation-delay: 2.36292s;"></div><div class="confetti" style="width: 14.0632px; height: 14.0632px; background-color: rgb(34, 211, 238); left: 17.9119vw; top: -20px; border-radius: 50%; animation-duration: 3.87969s; animation-delay: 3.64269s;"></div><div class="confetti" style="width: 6.09655px; height: 6.09655px; background-color: rgb(34, 211, 238); left: 6.3679vw; top: -20px; border-radius: 0%; animation-duration: 4.67998s; animation-delay: 4.65311s;"></div><div class="confetti" style="width: 14.5013px; height: 14.5013px; background-color: rgb(162, 238, 255); left: 26.6556vw; top: -20px; border-radius: 50%; animation-duration: 4.47926s; animation-delay: 1.24334s;"></div><div class="confetti" style="width: 11.2869px; height: 11.2869px; background-color: rgb(34, 211, 238); left: 42.2247vw; top: -20px; border-radius: 50%; animation-duration: 4.79899s; animation-delay: 1.30045s;"></div><div class="confetti" style="width: 13.886px; height: 13.886px; background-color: rgb(107, 216, 203); left: 5.16781vw; top: -20px; border-radius: 50%; animation-duration: 4.24776s; animation-delay: 1.13858s;"></div><div class="confetti" style="width: 14.0353px; height: 14.0353px; background-color: rgb(107, 216, 203); left: 71.3359vw; top: -20px; border-radius: 50%; animation-duration: 2.83465s; animation-delay: 4.52009s;"></div><div class="confetti" style="width: 9.22625px; height: 9.22625px; background-color: rgb(244, 114, 182); left: 97.3812vw; top: -20px; border-radius: 0%; animation-duration: 4.88357s; animation-delay: 2.2889s;"></div><div class="confetti" style="width: 14.7577px; height: 14.7577px; background-color: rgb(244, 114, 182); left: 56.0935vw; top: -20px; border-radius: 50%; animation-duration: 4.14612s; animation-delay: 1.97817s;"></div><div class="confetti" style="width: 13.368px; height: 13.368px; background-color: rgb(107, 216, 203); left: 13.8012vw; top: -20px; border-radius: 0%; animation-duration: 2.8615s; animation-delay: 2.66828s;"></div><div class="confetti" style="width: 11.4956px; height: 11.4956px; background-color: rgb(107, 216, 203); left: 28.4414vw; top: -20px; border-radius: 50%; animation-duration: 2.34173s; animation-delay: 0.171892s;"></div><div class="confetti" style="width: 13.3127px; height: 13.3127px; background-color: rgb(34, 211, 238); left: 63.9687vw; top: -20px; border-radius: 50%; animation-duration: 4.0046s; animation-delay: 2.97644s;"></div><div class="confetti" style="width: 8.35142px; height: 8.35142px; background-color: rgb(107, 216, 203); left: 84.8041vw; top: -20px; border-radius: 50%; animation-duration: 2.18946s; animation-delay: 3.73478s;"></div><div class="confetti" style="width: 9.15028px; height: 9.15028px; background-color: rgb(162, 238, 255); left: 30.0244vw; top: -20px; border-radius: 50%; animation-duration: 3.74792s; animation-delay: 3.64577s;"></div><div class="confetti" style="width: 7.37594px; height: 7.37594px; background-color: rgb(244, 114, 182); left: 24.1171vw; top: -20px; border-radius: 50%; animation-duration: 4.2402s; animation-delay: 4.38211s;"></div><div class="confetti" style="width: 12.1018px; height: 12.1018px; background-color: rgb(107, 216, 203); left: 19.5467vw; top: -20px; border-radius: 0%; animation-duration: 3.4108s; animation-delay: 4.26078s;"></div><div class="confetti" style="width: 11.5153px; height: 11.5153px; background-color: rgb(34, 211, 238); left: 83.6167vw; top: -20px; border-radius: 50%; animation-duration: 4.86931s; animation-delay: 0.104218s;"></div><div class="confetti" style="width: 9.4015px; height: 9.4015px; background-color: rgb(107, 216, 203); left: 45.4904vw; top: -20px; border-radius: 50%; animation-duration: 2.80404s; animation-delay: 2.34839s;"></div><div class="confetti" style="width: 13.6563px; height: 13.6563px; background-color: rgb(244, 114, 182); left: 65.0109vw; top: -20px; border-radius: 0%; animation-duration: 3.12378s; animation-delay: 4.19832s;"></div><div class="confetti" style="width: 6.48073px; height: 6.48073px; background-color: rgb(250, 204, 21); left: 32.3002vw; top: -20px; border-radius: 0%; animation-duration: 4.2562s; animation-delay: 1.97706s;"></div><div class="confetti" style="width: 5.36px; height: 5.36px; background-color: rgb(107, 216, 203); left: 82.051vw; top: -20px; border-radius: 0%; animation-duration: 2.28471s; animation-delay: 2.90745s;"></div><div class="confetti" style="width: 8.70524px; height: 8.70524px; background-color: rgb(107, 216, 203); left: 12.5766vw; top: -20px; border-radius: 50%; animation-duration: 3.46353s; animation-delay: 2.16375s;"></div><div class="confetti" style="width: 8.68285px; height: 8.68285px; background-color: rgb(250, 204, 21); left: 32.634vw; top: -20px; border-radius: 50%; animation-duration: 2.20984s; animation-delay: 2.55885s;"></div><div class="confetti" style="width: 8.99767px; height: 8.99767px; background-color: rgb(250, 204, 21); left: 10.9993vw; top: -20px; border-radius: 50%; animation-duration: 4.48666s; animation-delay: 4.53293s;"></div><div class="confetti" style="width: 14.5471px; height: 14.5471px; background-color: rgb(162, 238, 255); left: 98.2047vw; top: -20px; border-radius: 50%; animation-duration: 4.17825s; animation-delay: 3.4123s;"></div><div class="confetti" style="width: 5.99025px; height: 5.99025px; background-color: rgb(162, 238, 255); left: 67.356vw; top: -20px; border-radius: 0%; animation-duration: 4.53494s; animation-delay: 4.13788s;"></div><div class="confetti" style="width: 5.76233px; height: 5.76233px; background-color: rgb(107, 216, 203); left: 83.9634vw; top: -20px; border-radius: 50%; animation-duration: 4.13545s; animation-delay: 1.90626s;"></div><div class="confetti" style="width: 12.3819px; height: 12.3819px; background-color: rgb(162, 238, 255); left: 87.5873vw; top: -20px; border-radius: 0%; animation-duration: 3.07238s; animation-delay: 1.85705s;"></div><div class="confetti" style="width: 6.45181px; height: 6.45181px; background-color: rgb(34, 211, 238); left: 12.1414vw; top: -20px; border-radius: 0%; animation-duration: 3.47221s; animation-delay: 3.1772s;"></div><div class="confetti" style="width: 13.1909px; height: 13.1909px; background-color: rgb(244, 114, 182); left: 73.9057vw; top: -20px; border-radius: 50%; animation-duration: 2.4374s; animation-delay: 1.95794s;"></div><div class="confetti" style="width: 11.6078px; height: 11.6078px; background-color: rgb(244, 114, 182); left: 31.4959vw; top: -20px; border-radius: 0%; animation-duration: 2.69013s; animation-delay: 2.81684s;"></div><div class="confetti" style="width: 6.86683px; height: 6.86683px; background-color: rgb(107, 216, 203); left: 60.1249vw; top: -20px; border-radius: 0%; animation-duration: 2.9497s; animation-delay: 1.95803s;"></div><div class="confetti" style="width: 8.071px; height: 8.071px; background-color: rgb(34, 211, 238); left: 37.5261vw; top: -20px; border-radius: 50%; animation-duration: 4.63361s; animation-delay: 1.4041s;"></div><div class="confetti" style="width: 5.02614px; height: 5.02614px; background-color: rgb(162, 238, 255); left: 16.3215vw; top: -20px; border-radius: 0%; animation-duration: 4.10316s; animation-delay: 3.37529s;"></div><div class="confetti" style="width: 11.2419px; height: 11.2419px; background-color: rgb(244, 114, 182); left: 17.3144vw; top: -20px; border-radius: 0%; animation-duration: 3.74732s; animation-delay: 1.11846s;"></div><div class="confetti" style="width: 11.882px; height: 11.882px; background-color: rgb(250, 204, 21); left: 45.878vw; top: -20px; border-radius: 0%; animation-duration: 3.67724s; animation-delay: 2.03984s;"></div><div class="confetti" style="width: 8.81856px; height: 8.81856px; background-color: rgb(107, 216, 203); left: 25.6603vw; top: -20px; border-radius: 0%; animation-duration: 4.01791s; animation-delay: 2.68972s;"></div><div class="confetti" style="width: 8.91483px; height: 8.91483px; background-color: rgb(162, 238, 255); left: 26.5182vw; top: -20px; border-radius: 0%; animation-duration: 3.57164s; animation-delay: 1.47105s;"></div><div class="confetti" style="width: 12.0543px; height: 12.0543px; background-color: rgb(34, 211, 238); left: 8.26337vw; top: -20px; border-radius: 50%; animation-duration: 2.19851s; animation-delay: 3.5338s;"></div><div class="confetti" style="width: 10.6111px; height: 10.6111px; background-color: rgb(250, 204, 21); left: 29.1768vw; top: -20px; border-radius: 50%; animation-duration: 3.67142s; animation-delay: 1.19991s;"></div><div class="confetti" style="width: 12.2052px; height: 12.2052px; background-color: rgb(34, 211, 238); left: 69.9682vw; top: -20px; border-radius: 50%; animation-duration: 4.02517s; animation-delay: 4.53338s;"></div><div class="confetti" style="width: 8.39972px; height: 8.39972px; background-color: rgb(244, 114, 182); left: 30.0289vw; top: -20px; border-radius: 50%; animation-duration: 3.4113s; animation-delay: 4.59947s;"></div><div class="confetti" style="width: 5.92683px; height: 5.92683px; background-color: rgb(34, 211, 238); left: 40.7415vw; top: -20px; border-radius: 50%; animation-duration: 4.024s; animation-delay: 0.696752s;"></div><div class="confetti" style="width: 8.65494px; height: 8.65494px; background-color: rgb(107, 216, 203); left: 66.8817vw; top: -20px; border-radius: 50%; animation-duration: 3.38975s; animation-delay: 2.38524s;"></div><div class="confetti" style="width: 9.2156px; height: 9.2156px; background-color: rgb(107, 216, 203); left: 37.2752vw; top: -20px; border-radius: 50%; animation-duration: 3.60073s; animation-delay: 3.80624s;"></div><div class="confetti" style="width: 6.63812px; height: 6.63812px; background-color: rgb(107, 216, 203); left: 68.1558vw; top: -20px; border-radius: 0%; animation-duration: 3.55515s; animation-delay: 2.90715s;"></div><div class="confetti" style="width: 11.2583px; height: 11.2583px; background-color: rgb(250, 204, 21); left: 47.2705vw; top: -20px; border-radius: 0%; animation-duration: 2.81875s; animation-delay: 2.14741s;"></div><div class="confetti" style="width: 6.29599px; height: 6.29599px; background-color: rgb(34, 211, 238); left: 9.21792vw; top: -20px; border-radius: 0%; animation-duration: 3.20975s; animation-delay: 4.04647s;"></div><div class="confetti" style="width: 14.1605px; height: 14.1605px; background-color: rgb(250, 204, 21); left: 71.1908vw; top: -20px; border-radius: 50%; animation-duration: 3.73482s; animation-delay: 3.29575s;"></div><div class="confetti" style="width: 8.3904px; height: 8.3904px; background-color: rgb(244, 114, 182); left: 47.56vw; top: -20px; border-radius: 0%; animation-duration: 4.5106s; animation-delay: 1.86417s;"></div><div class="confetti" style="width: 5.02034px; height: 5.02034px; background-color: rgb(107, 216, 203); left: 89.2682vw; top: -20px; border-radius: 50%; animation-duration: 2.93508s; animation-delay: 3.70665s;"></div><div class="confetti" style="width: 11.4407px; height: 11.4407px; background-color: rgb(250, 204, 21); left: 48.1404vw; top: -20px; border-radius: 50%; animation-duration: 3.71098s; animation-delay: 2.78132s;"></div><div class="confetti" style="width: 9.27736px; height: 9.27736px; background-color: rgb(244, 114, 182); left: 82.7363vw; top: -20px; border-radius: 0%; animation-duration: 2.26316s; animation-delay: 2.72677s;"></div><div class="confetti" style="width: 13.1837px; height: 13.1837px; background-color: rgb(162, 238, 255); left: 67.1557vw; top: -20px; border-radius: 50%; animation-duration: 4.08529s; animation-delay: 3.1031s;"></div><div class="confetti" style="width: 8.08726px; height: 8.08726px; background-color: rgb(162, 238, 255); left: 40.1555vw; top: -20px; border-radius: 50%; animation-duration: 2.19829s; animation-delay: 2.36007s;"></div><div class="confetti" style="width: 5.39273px; height: 5.39273px; background-color: rgb(34, 211, 238); left: 50.7318vw; top: -20px; border-radius: 0%; animation-duration: 3.51207s; animation-delay: 4.9232s;"></div><div class="confetti" style="width: 8.97793px; height: 8.97793px; background-color: rgb(162, 238, 255); left: 68.0185vw; top: -20px; border-radius: 0%; animation-duration: 3.24251s; animation-delay: 2.13408s;"></div></div>
+</header>
+<!-- Carousel Photo Gallery Section -->
+<section class="py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Our Favorite Moments</h2>
+<div class="flex items-center gap-2 font-label-mono text-label-mono text-festive-gold">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span class="">Array(Memories).filter(best =&gt; true)</span>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant/30 hover:bg-primary hover:text-on-primary hover:border-primary transition-all active:scale-90" id="prevBtn">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant/30 hover:bg-primary hover:text-on-primary hover:border-primary transition-all active:scale-90" id="nextBtn">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="relative w-full max-w-full overflow-hidden">
+<div class="carousel-track px-[10%] md:px-[25%]" id="carouselTrack" style="transform: translateX(0px);">
+<!-- Slide 1 -->
+<div class="carousel-item active">
+<div class="relative aspect-[3/4] md:aspect-[2/3] h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden glass-card transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBYvifQLGLE5YKarQJo4dq4uWHCItsCqYUSPjbqDWrn1U6dOTaAemcS3BuvUS7neUc6Hae_q065TIFXdJUTfperenr4pMm_0nug930M-dGGT6Xr1CLhrDsvAbEy1dVR6SkYcQmPpsrW5j-ovlu0OMEOSZDkp_yWD4997n0jVKzs4WPHfHNCLf_DvmojjW2zGuPxmkllW4EoL16npsZI-0GYNHAFUrEK7LXbO9GSV-4qEk6QmnRytnn2-8K0iAZ3gOPEhOaaXwsZhviV9A&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-void/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-12">
+<span class="inline-block px-3 py-1 rounded bg-festive-gold/10 text-festive-gold font-label-mono text-label-caps mb-3">#May_2026</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">That one time in Bogor...</h3>
+<p class="text-on-surface-variant font-body-md">The most beautiful morning with my favorite human.</p>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="carousel-item">
+<div class="relative aspect-[3/4] md:aspect-[2/3] h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden glass-card transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA4UXKkJaCcNlj8AqVkJceLyML2-uDL8xYdVQ-N3GEJsh4EnkTcxNR5ORzKgjr2iqpaeIgLe3PxTHtFMc468Osz5e5-uxAks8ui3cvVKIYyV_Ozv3eugmfsSalF_mVYG0qr3bI_2llOfPmZGf-FijY6k4wQFV3bKEtan9OvVMsmLylMaZ9tQBmu2yAhCaCtWhcDJT9aPdLJx5LgYu-s4ohTsMWU52b2OwGRhvwYXPkwOm33VNjBOs9md0rFUpXcqQnKu7L0iZcWM_uVfw&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-void/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-12">
+<span class="inline-block px-3 py-1 rounded bg-primary/10 text-primary font-label-mono text-label-caps mb-3">#COUPLE</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Late Night at Bogor</h3>
+<p class="text-on-surface-variant font-body-md">Strolling around Bogor for 3 days</p>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="carousel-item">
+<div class="relative aspect-[3/4] md:aspect-[2/3] h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden glass-card transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBKXisRjWQRpNhS_MQCACeB1Pan2j_yOu59GhcEQw_6hbkOblGcoJC-9kmk9VVMf4dYuvxbdoUzk6jXiJ8aI0DM_ByX1UScR8MivNdcpB2VXwCNmYoWJjZKzhQVMbsuGjTecfMrim3q7xJUAFiEnWv1T9zPoxBClLlxDG9N8n2xe6uHNHcp5-r4_Gd-MaqYnIxLOMmcsCbOhc41fbJtrRf69300hJHw6cAXu7N8zbhz_noDziMcShP-O8DHQK3rRbDOebUCiAnHfIR5lQ&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-void/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-12">
+<span class="inline-block px-3 py-1 rounded bg-festive-pink/10 text-festive-pink font-label-mono text-label-caps mb-3">#LAUGH_OUT_LOUD</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Stand Up Comedy</h3>
+<p class="text-on-surface-variant font-body-md">Our first time watching a stand-up comedy show.</p>
+</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="carousel-item">
+<div class="relative aspect-[3/4] md:aspect-[2/3] h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden glass-card transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDeP9Xd7-jKOJ-AcNOn9ENICXHZtJC1AaCYu5TzuMymoQO1tYvYni98s_r0Y9BFwgZOb1_LwRDyiwr5hlS-H9-5nmxX7kPmlwwwYlQkB-el1in8EqlASlAx_XUfsoXefxJSWSL7N3DzLzhd-ZufcS6yEBM48FK4ohXOEPnRohAmYVWAcjKg5sWCud04cWcE-G4Ea0esMnXmRxXUBcJmin01UCb2i8GtobIm8xuKnJh3sxBnqyMPID0TWhSQfEWd_gjbUyz07tGxtr24ZQ&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-void/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-12">
+<span class="inline-block px-3 py-1 rounded bg-secondary/10 text-secondary font-label-mono text-label-caps mb-3">#LIFE_UPGRADED</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Gym Buddy</h3>
+<p class="text-on-surface-variant font-body-md">Building healthy life together</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-8 gap-3" id="carouselDots"><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-primary w-8"></div><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-outline-variant/50"></div><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-outline-variant/50"></div><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-outline-variant/50"></div><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-outline-variant/50"></div><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-outline-variant/50"></div><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-outline-variant/50"></div><div class="w-2 h-2 rounded-full cursor-pointer transition-all bg-outline-variant/50"></div></div>
+</section>
+<!-- Heartfelt Message Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="absolute inset-0 pointer-events-none opacity-30">
+</div>
+<div class="relative z-10 max-w-3xl mx-auto px-margin-mobile text-center">
+<div class="mb-12">
+<span class="material-symbols-outlined text-festive-pink text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div class="font-label-mono text-label-mono mb-8 text-syntax-dim">
+                    const <span class="text-syntax-cyan">loveMessage</span> = () =&gt; {
+                </div>
+<p class="font-headline-lg text-headline-lg text-on-surface leading-relaxed italic mb-8">"Happy birthday to the man of my dreams and my soon-to-be husband. At 28, you've already built a beautiful life, and I'm so proud to be the one standing by your side as we start our next chapter together."</p>
+<div class="font-label-mono text-label-mono text-syntax-dim">
+                    return <span class="text-syntax-gold">"Forever Yours"</span>;
+                    <br>}
+                </div>
+</div>
+</div>
+</section>
+<!-- Wedding Countdown Section -->
+<section class="py-section-gap bg-surface-container-low/50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="glass-card rounded-[3rem] p-12 md:p-24 relative overflow-hidden border-2 border-primary/20 glow-cyan transition-all duration-1000 opacity-100 translate-y-0">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-symbols-outlined text-[200px]">celebration</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-[40px] leading-tight text-on-surface mb-6">Counting Down to <span class="text-festive-gold text-glow-gold">June 26th</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">In just a few days, we start our biggest adventure yet. I'm looking forward to a lifetime of growing and learning together with you. You make every day better.</p>
+<!-- Countdown Mockup -->
+<div class="flex gap-4 md:gap-8 mb-10">
+<div class="text-center">
+<div class="w-16 h-16 md:w-24 md:h-24 bg-background-void flex items-center justify-center rounded-2xl border border-outline-variant/30 text-primary font-display-hero-mobile">
+                                    04
+                                </div>
+<div class="font-label-mono text-label-caps mt-3 text-on-surface-variant">DAYS</div>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 md:w-24 md:h-24 bg-background-void flex items-center justify-center rounded-2xl border border-outline-variant/30 text-primary font-display-hero-mobile">
+                                    12
+                                </div>
+<div class="font-label-mono text-label-caps mt-3 text-on-surface-variant">HOURS</div>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 md:w-24 md:h-24 bg-background-void flex items-center justify-center rounded-2xl border border-outline-variant/30 text-primary font-display-hero-mobile">
+                                    45
+                                </div>
+<div class="font-label-mono text-label-caps mt-3 text-on-surface-variant">MINS</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-full border-4 border-dashed border-primary/20 p-4 animate-[spin_60s_linear_infinite]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-4/5 h-4/5 rounded-full overflow-hidden border-4 border-white shadow-2xl rotate-3">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC8qYymfzdGJiP9XqsCk68aGTpOSBW8EaXVQbA1oF5cLUso2MKBWG9EOVzxi0LT9Yaz_KEk_JOTgA5foA2RwkEBRbQrNWQSoR1ICLgglrzXjhNVIsOUu7S3ZgR9tVoH4f2ZWF2uW6m9U8EoK4_RHnuJ8_HTknH3rxpbiplvcKo_MkSzyydwOxWkH3EZZ0b0-OHBhL19uNK63rZfPMMdPc6kFJVWMDhsR5Lf6zgtHuIYJ-Y2Vdjfv9X0sDM6vPwRwzywSgTJbfUIia6veA&quot;);"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-dim border-t border-outline-variant/10 w-full py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="text-center md:text-left mb-8 md:mb-0">
+<div class="font-label-mono text-label-mono text-festive-gold mb-4 uppercase tracking-widest">
+                    With all my love, JULIA</div>
+<div class="text-secondary font-body-md">
+                    Handcrafted with code for your special day
+                </div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="flex gap-6">
+
+
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+
+</div>
+</div>
+</div>
+<div class="text-center mt-16 text-on-surface-variant/30 font-label-mono text-[10px]">
+            SYSTEM.UPTIME: 28_YEARS // DEPLOYMENT_STABLE: TRUE
+        </div>
+</footer>
+<script>
+        // Confetti Logic
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#22d3ee', '#FACC15', '#F472B6', '#6bd8cb', '#a2eeff'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                const size = Math.random() * 10 + 5 + 'px';
+                confetti.style.width = size;
+                confetti.style.height = size;
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-20px';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
+                
+                const duration = Math.random() * 3 + 2;
+                const delay = Math.random() * 5;
+                confetti.style.animationDuration = duration + 's';
+                confetti.style.animationDelay = delay + 's';
+                
+                container.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, (duration + delay) * 1000);
+            }
+        }
+
+        // Carousel Logic
+        const track = document.getElementById('carouselTrack');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('carouselDots');
+        let currentIndex = 0;
+
+        // Create dots
+        items.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = `w-2 h-2 rounded-full cursor-pointer transition-all ${i === 0 ? 'bg-primary w-8' : 'bg-outline-variant/50'}`;
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('div');
+
+        function updateCarousel() {
+            const itemWidth = items[0].offsetWidth;
+            const offset = -currentIndex * itemWidth;
+            track.style.transform = `translateX(${offset}px)`;
+
+            items.forEach((item, i) => {
+                if (i === currentIndex) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === currentIndex) {
+                    dot.classList.add('bg-primary', 'w-8');
+                    dot.classList.remove('bg-outline-variant/50');
+                } else {
+                    dot.classList.remove('bg-primary', 'w-8');
+                    dot.classList.add('bg-outline-variant/50');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        // Trigger on load
+        window.onload = () => {
+            createConfetti();
+            setInterval(createConfetti, 10000);
+            updateCarousel();
+        };
+
+        // Resize handler to fix carousel offset
+        window.addEventListener('resize', updateCarousel);
+
+        // Scroll Reveal effect for glass cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+
+
+
+
+</body></html>
+
+<!-- Happy Birthday Martunis - The Gift -->
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Happy Birthday Martunis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        
+        body {
+            background-color: #0A0C14;
+            color: #e1e1f1;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(26, 29, 46, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(133, 147, 151, 0.1);
+        }
+
+        .tech-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(34, 211, 238, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.02); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .glow-pulse {
+            box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(34, 211, 238, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            pointer-events: none;
+            z-index: 100;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#1d1f2a",
+                      "on-primary-fixed": "#001f25",
+                      "primary-container": "#22d3ee",
+                      "secondary-container": "#29a195",
+                      "primary-fixed": "#a2eeff",
+                      "on-primary": "#00363e",
+                      "festive-gold": "#FACC15",
+                      "on-surface-variant": "#bbc9cd",
+                      "on-background": "#e1e1f1",
+                      "outline": "#859397",
+                      "tertiary-fixed": "#ffddb5",
+                      "on-secondary-container": "#00302b",
+                      "surface-container-low": "#191b26",
+                      "secondary": "#6bd8cb",
+                      "outline-variant": "#3c494c",
+                      "on-primary-container": "#005763",
+                      "on-primary-fixed-variant": "#004e5a",
+                      "on-secondary-fixed": "#00201d",
+                      "inverse-surface": "#e1e1f1",
+                      "on-secondary-fixed-variant": "#005049",
+                      "on-tertiary-fixed-variant": "#643f00",
+                      "inverse-primary": "#006877",
+                      "primary-fixed-dim": "#2fd9f4",
+                      "surface-charcoal": "#1A1D2E",
+                      "surface-container-high": "#272935",
+                      "tertiary": "#ffd6a3",
+                      "secondary-fixed-dim": "#6bd8cb",
+                      "primary": "#8aebff",
+                      "surface-container-lowest": "#0b0e18",
+                      "surface-bright": "#373845",
+                      "inverse-on-surface": "#2e303c",
+                      "surface-tint": "#2fd9f4",
+                      "error-container": "#93000a",
+                      "on-secondary": "#003732",
+                      "on-tertiary-fixed": "#2a1800",
+                      "on-error-container": "#ffdad6",
+                      "festive-pink": "#F472B6",
+                      "on-surface": "#e1e1f1",
+                      "on-error": "#690005",
+                      "surface-dim": "#11131e",
+                      "on-tertiary": "#462b00",
+                      "surface": "#11131e",
+                      "tertiary-fixed-dim": "#ffb957",
+                      "tertiary-container": "#ffb13b",
+                      "background-void": "#0A0C14",
+                      "error": "#ffb4ab",
+                      "surface-variant": "#323440",
+                      "secondary-fixed": "#89f5e7",
+                      "background": "#11131e",
+                      "on-tertiary-container": "#6e4600",
+                      "surface-container-highest": "#323440"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "section-gap": "120px",
+                      "base": "8px",
+                      "margin-mobile": "16px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-hero-mobile": ["Sora"],
+                      "headline-md": ["Sora"],
+                      "headline-lg": ["Sora"],
+                      "display-hero": ["Sora"],
+                      "body-md": ["Inter"],
+                      "label-mono": ["JetBrains Mono"],
+                      "label-caps": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "display-hero-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-hero": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background-void selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-hero-mobile text-headline-md text-primary dark:text-primary tracking-tighter">
+                Martunis</div>
+<div class="hidden md:flex gap-gutter items-center">
+
+
+
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-mono text-label-mono active:scale-95 transition-transform hover:bg-surface-bright/10">
+                Back to Box
+            </button>
+</nav>
+</header>
+<main class="relative pt-32 min-h-screen flex flex-col items-center justify-center tech-grid px-margin-mobile overflow-hidden">
+<!-- Ethereal Glow Backgrounds -->
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -z-10 animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full -z-10 animate-pulse" style="animation-delay: 2s;"></div>
+<!-- Hero Content -->
+<div class="text-center max-w-4xl mx-auto z-10">
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-background mb-6 tracking-tighter">
+                Happy Birthday <span class="text-primary">Martunis</span> <span class="text-festive-pink">❤</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto opacity-80">
+                A little late, but with all my love. I have a surprise for you...
+            </p>
+<!-- Mystery Box Interaction -->
+<div class="relative group cursor-pointer perspective-1000" onclick="celebrate()">
+<div class="animate-float relative z-20 transition-all duration-700 hover:scale-105 active:scale-90" id="mystery-box">
+<img alt="A mysterious sleek black gift box with neon cyan highlights" class="w-full max-w-[500px] mx-auto drop-shadow-[0_0_50px_rgba(34,211,238,0.2)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE2AqplFg1GGB0P__JXOhgeNi8sJlk3UNxrSBuIAizbiezLUFMmVAJK-nq2w6Id08eo84w26a40W9EBCT0JsPuGQeJ8BttbF5xX9fF_VYeMpaVn-LhaECUaQ2_9VEqV8xbCht6ZtGOT4K0Jozcsk1FoKcvwqIk0Soi0ouc7mAWtSIe1D6eabXROXtz5uCQx2b8wH3UgmGklw2JJFQRerC10OoS539L38xzZjUxiKdSjqoKZVooVsv-_ab4b7037A_8J1TGXTeWnDw">
+<!-- Floating 'Open Me' label -->
+<div class="absolute -top-4 -right-4 md:right-10 bg-surface-charcoal border border-primary/50 text-primary px-4 py-2 rounded-lg font-label-mono text-label-mono glow-pulse transform rotate-12 group-hover:rotate-0 transition-transform">
+                        SYSTEM.OPEN()
+                    </div>
+</div>
+<!-- Interaction Prompt -->
+<div class="mt-8 flex flex-col items-center gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant/60 font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-festive-gold" data-icon="volume_up">volume_up</span>
+<span class="">TURN UP YOUR VOLUME</span>
+</div>
+<button class="bg-transparent border border-primary/30 text-primary hover:bg-primary/10 px-8 py-3 rounded-full font-label-mono text-label-mono transition-all group-hover:border-primary">
+                        INITIALIZE_SURPRISE_SEQUENCE
+                    </button>
+</div>
+</div>
+</div>
+<!-- Bento Grid Teaser (Optional Luxury Addition) -->
+<section class="w-full max-w-container-max mx-auto mt-section-gap mb-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile">
+<div class="glass-panel p-8 rounded-3xl col-span-1 md:col-span-2 flex flex-col justify-between">
+<div>
+<span class="text-festive-pink font-label-mono text-label-mono mb-4 block opacity-70">// Milestone</span>
+<h3 class="font-headline-lg text-headline-lg text-on-background mb-4">Level Up: 2026</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Another year of building, breaking, and creating. Your journey as a developer is just beginning, and I'm so proud of every commit you make.</p>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-label-caps font-label-caps">HTML</span>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-label-caps font-label-caps">REACT</span>
+<span class="bg-festive-gold/10 text-festive-gold px-3 py-1 rounded-full text-label-caps font-label-caps">LOVE</span>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-3xl col-span-1 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="terminal">terminal</span>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Waiting for user input...</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-dim dark:bg-surface-dim border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-base max-w-container-max mx-auto">
+<div class="text-center md:text-left mb-6 md:mb-0">
+<div class="font-label-mono text-label-mono text-festive-gold mb-2 uppercase tracking-widest">Martunis_OS</div>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary">Handcrafted with code for your special day</p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant/60 italic">Turn up your volume and click the box.</p>
+<div class="flex gap-gutter">
+<a class="text-on-surface-variant hover:text-festive-pink transition-colors font-body-md text-body-md" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-festive-pink transition-colors font-body-md text-body-md" href="#">Privacy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Birthday Celebration Script -->
+<script>
+        function celebrate() {
+            const colors = ['#22d3ee', '#8aebff', '#FACC15', '#F472B6', '#6bd8cb'];
+            
+            // Simple Confetti Burst
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = '50%';
+                confetti.style.top = '50%';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                const angle = Math.random() * Math.PI * 2;
+                const velocity = 10 + Math.random() * 20;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                document.body.appendChild(confetti);
+                
+                let posX = window.innerWidth / 2;
+                let posY = window.innerHeight / 2;
+                let opacity = 1;
+                
+                const animate = () => {
+                    posX += vx;
+                    posY += vy + 0.5; // Gravity
+                    opacity -= 0.01;
+                    
+                    confetti.style.transform = `translate(${posX - window.innerWidth/2}px, ${posY - window.innerHeight/2}px) rotate(${posX}deg)`;
+                    confetti.style.opacity = opacity;
+                    
+                    if (opacity > 0) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        confetti.remove();
+                    }
+                };
+                
+                requestAnimationFrame(animate);
+            }
+
+            // Visual feedback on the box
+            const box = document.getElementById('mystery-box');
+            box.style.transform = 'scale(1.2) rotate(5deg)';
+            setTimeout(() => {
+                box.style.transform = 'scale(1) rotate(0deg)';
+                alert("Surprise sequence initiated! Checking local storage for 'love' packets... Found 1,000,000+ matches.");
+            }, 300);
+        }
+    </script>
+
+
+
+
+</body></html>
